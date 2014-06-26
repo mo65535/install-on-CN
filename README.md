@@ -13,22 +13,21 @@ In the few steps that involve editing a text file, this guide refers to
 the console-based editor, nano, which will not require X11 forwarding on 
 the SSH connections. If you wish to use a graphical text editor, such 
 as gedit, be sure to enable X11 (for *both* SSH connections) with the -X 
-command line option, `ssh -X <user>@<server>`.
+command line option, `ssh -X <USER>@<HOST>`.
 
 ## Explanation of folders
 
-I tend to put standalone executables that aren't too large, e.g. the
-grep replacement, ack, directly in `~/linux/bin/`
+I tend to put small standalone executables right in `~/linux/bin/`.
 
 For larger programs whose install consists of several files/folders,
 e.g. Python, I put them in their own folder within `~/programs/` which 
 is a folder I have created for the purpose of installing stuff. 
 Then I create symlinks in `~/linux/bin/` which point to the relevant 
 executable(s), or add the folder, e.g. `~/programs/name_of_tool/bin/` 
-which contains those executables to my shell's PATH variable.
+which contains those executables to the shell's PATH variable.
 
 Assuming you don't already have a `~/programs` folder, create one for
-following along with the guide.
+the purpose of following along with the guide.
 
 ```bash
 mkdir ~/programs
@@ -74,13 +73,13 @@ quit the editor with **Ctrl+X**.
 
 #### Note:
 Either log out and back in for this change to take effect, or paste 
-that line into the shell and run it.
+that `setenv ` command into the shell and run it.
 
 
 The way the CN machines are configured, their login scripts will add 
-the `~/linux/bin` folder to the end of the PATH. This means that, for
-instance, `/usr/bin/python` will be found before `~/linux/bin/python`,
-so the wrong version is launched when `python` is typed in the terminal.
+the `~/linux/bin` folder to the end of the PATH. This means that
+`/usr/bin/python` will be found before `~/linux/bin/python`, so the 
+wrong version is launched when `python` is typed in the terminal.
 
 Now that this line has been added to `~/.cshrc_linux`, `~/linux/bin` 
 will appear before other entries that the system adds to the path. So 
@@ -103,7 +102,7 @@ chmod 0755 ack
 ```
 
 After adding a new executable to a folder in the PATH, the shell must be
-notified, so it finds the proper executable. This can be done with
+notified or it may not see the executable. This can be done with
 
 ```bash
 source ~/.cshrc_linux
@@ -202,23 +201,19 @@ If the command
 which python
 ```
 
-prints `/export/home/<YOUR_USERNAME>/linux/bin/python`, that's great.
-If it prints `/usr/bin/python`, then one of the steps above may not have
-been carried out correctly.
-
+prints `/export/home/<YOUR_USERNAME>/linux/bin/python`, then the
+configuration has been performed properly. If it prints 
+`/usr/bin/python`, then one of the steps above may not have been
+carried out correctly.
 
 
 
 ### Python usage
 
-There is now have a user level installation of Python. Feel free to fire
-it up and test it by playing around in the interactive shell. The 
-prompt will change to `>>> `, and calling the exit function, 
-`>>> exit()`, will close the interactive shell.
-
-To get out of the older Python 2.4 shell, the sys module will need to
-be imported for the use of its exit() function. Here is a one line 
-command to quit: `>>> import sys; sys.exit()`.
+There is now a user level installation of Python. Feel free to launch
+it and test it by playing around in the interactive shell. The prompt
+will change to `>>> `, and calling the exit function, `>>> exit()`, 
+will close the interactive shell.
 
 Now, set an environment variable so Python package managers install
 to the correct location.
@@ -273,8 +268,8 @@ source ~/.cshrc_linux
 ## Cleanup
 
 The downloaded files can be deleted with the following commands, 
-**which do not ask for confirmation, so be sure not to delete the 
-wrong files.**
+which do not ask for confirmation, so be sure not to delete the 
+wrong files.
 
 ```bash
 cd ~/Downloads
@@ -290,7 +285,7 @@ rm -rf Python-2.7.7     # Extracted from the .tgz
 ## Using pip to install packages
 
 A lot of steps were involved in getting Python and pip set up. 
-Now, using pip, it is very easy to installing additional packages for
+Now, using pip, it is very easy to install additional packages for
 Python.
 
 As an example, search pip for packages with dicom in the name
