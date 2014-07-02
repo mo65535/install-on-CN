@@ -232,8 +232,8 @@ setenv PYTHONHOME ~/programs/python
 ```
 
 #### Note:
-As before, after saving the change to this file, log out and back in,
-or run the command in the terminal so the changes take effect.
+* As before, after saving the change to this file, log out and back in,
+  or run the command in the terminal so the changes take effect.
 
 ## Installing pip, a Python package manager
 
