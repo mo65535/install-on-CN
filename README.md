@@ -50,6 +50,14 @@ are configured to use by default. If you were wily enough to make it
 launch bash instead of tcsh when you log in, you probably know where to
 make the appropriate changes to files and commands listed below.
 
+#### Using nano:
+* After copying text from the guide, it can be pasted into the nano
+  editor with **Ctrl+Shift+V**. 
+* To save the file (the command is called "WriteOut"), press **Ctrl+O**
+  (the letter o), then press **Enter** without changing the filename.
+* Finally, quit the editor with **Ctrl+X**.
+
+
 Now edit the `~/.cshrc_linux` file so the user level bin folder has
 priority over other locations when the shell searches by name for an
 executable. If the file doesn't already exist, the editor should create
@@ -64,11 +72,6 @@ add the following line to the end of the file, then save it.
 ```bash
 setenv PATH ~/linux/bin:${PATH}
 ```
-
-After copying text from the guide, it can be pasted into nano with
-**Ctrl+Shift+V**. To save the file ("WriteOut"), **Ctrl+O** (the 
-letter o), then press enter without changing the filename, and finally,
-quit the editor with **Ctrl+X**.
 
 
 #### Note:
