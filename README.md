@@ -75,8 +75,8 @@ setenv PATH ~/linux/bin:${PATH}
 
 
 #### Note:
-Either log out and back in for this change to take effect, or paste 
-that `setenv ` command into the shell and run it.
+* Either log out and back in for this change to take effect, or paste 
+  that `setenv ` command into the shell and run it.
 
 
 The way the CN machines are configured, their login scripts will add 
