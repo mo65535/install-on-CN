@@ -39,8 +39,8 @@ mkdir ~/programs
 
 I keep enormous programs in `/data/<USERNAME>/programs-big` and create 
 symlinks or add to the PATH as described above. There aren't a lot of 
-these I have to deal with. For example though, if you build ANTs, a 
-package for image registration, following the developer's recommended 
+these I have to deal with. For example though, if you build the image
+registration package, ANTs, following the developers' recommended
 install method, it takes up 5.7 GB (including ITK, which is also 
 downloaded and built in that process). This is a big step toward 
 hitting the home directory size cap, and such programs probably don't
