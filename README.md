@@ -47,6 +47,14 @@ hitting the home directory size cap, and such programs probably don't
 need to be backed up often, so the data directory is a good fit.
 
 
+**A final thought on folders:**
+If you intend to install very large Python packages, you may want to 
+reconsider the location for the Python install. You could perform the
+steps here, altered slightly so that the install goes in a folder like
+`/data/<YOUR_USERNAME>/programs-big/python` instead.
+
+
+
 ## Set up shell
 
 This guide assumes you're using the tcsh shell, which the CN machines 
@@ -296,7 +304,8 @@ A lot of steps were involved in getting Python and pip set up.
 Now, using pip, it is very easy to install additional packages for
 Python.
 
-As an example, search pip for packages with dicom in the name
+As an example, search the pip repository for packages with dicom 
+in their name
 
 ```bash
 pip search dicom
@@ -308,11 +317,9 @@ Install the desired one, pydicom
 pip install pydicom
 ```
 
-## Final thought
 
-If you install a lot of very large Python packages, you may want to 
-reconsider the location for the Python install. You could repeat
-the steps here, altered slightly so that the install goes in 
-`/data/<YOUR_USERNAME>/programs-big/python` instead.
+That's all there is to it. Pip is much simpler than building from
+source, though you may still have to build from source if you want
+a package that is not yet in pip's repository.
 
 Happy computing!
