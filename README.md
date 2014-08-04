@@ -153,8 +153,9 @@ ack --matlab 'addpath ~' /path/to/their/matlab/files
 
 By default, ack will descend into subdirectories of the search location.
 It's great for searching in large codebases to find things with a known
-name but unknown location (e.g. calls to a particular function). One of
-my favorite command line options is `-C` for printing additional lines of context before and after each line where the search term was found.
+name but unknown location (e.g. calls to a particular function). Another
+good command line options is `-C` for printing additional lines of 
+context before and after each line where the search term was found.
 
 ```bash
 ack -C 2 --cpp '->problem_function\(' ~/code/large_c++_project_root_dir
