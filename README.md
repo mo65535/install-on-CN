@@ -3,18 +3,21 @@
 A guide to installing various programs on the CN machines, where
 we do not have root/sudo permissions.
 
-The guide assumes you have an SSH client and have already SSHed into the 
-CN gateway (cn0) and from there, a computation CN machine that isn't too 
-heavily loaded. If the software were built for cn0, it wouldn't work on 
-the other CN machines (which are all 64-bit) and all the compiling would
-cause unnecessary load on cn0.
-
 In the few steps that involve editing a text file, this guide refers to 
 the console-based editor, nano, which will not require X11 forwarding on 
 the SSH connections. If you wish to use a graphical text editor, such 
 as gedit, be sure to enable X11 for both SSH connections (local to 
 gateway *and* gateway to CN) with the -X command line option, 
 `ssh -X <USER>@<HOST>`.
+
+The guide assumes you have an SSH client and have already SSHed into the 
+CN gateway (cn0) and from there, a usable CN machine that isn't too 
+heavily loaded. **We want to minimize the load on cn0, so don't build 
+software there.** Furthermore, its 32-bit OS means that executables 
+built for cn0 won't work on the CN machines which are intended for 
+computation.
+
+
 
 ## Explanation of folders
 
