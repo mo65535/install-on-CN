@@ -12,8 +12,9 @@ cause unnecessary load on cn0.
 In the few steps that involve editing a text file, this guide refers to 
 the console-based editor, nano, which will not require X11 forwarding on 
 the SSH connections. If you wish to use a graphical text editor, such 
-as gedit, be sure to enable X11 (for *both* SSH connections) with the -X 
-command line option, `ssh -X <USER>@<HOST>`.
+as gedit, be sure to enable X11 for both SSH connections (local to 
+gateway *and* gateway to CN) with the -X command line option, 
+`ssh -X <USER>@<HOST>`.
 
 ## Explanation of folders
 
@@ -52,7 +53,8 @@ make the appropriate changes to files and commands listed below.
 
 #### Using nano:
 * After copying text from the guide, it can be pasted into the nano
-  editor with **Ctrl+Shift+V**. 
+  editor (the shortcut for this might depend on your local terminal 
+  program, it's often something like **Ctrl+Shift+V**). 
 * To save the file (the command is called "WriteOut"), press **Ctrl+O**
   (the letter o), then press **Enter** without changing the filename.
 * Finally, quit the editor with **Ctrl+X**.
