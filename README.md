@@ -47,11 +47,11 @@ hitting the home directory size cap, and such programs probably don't
 need to be backed up often, so the data directory is a good fit.
 
 
-**A final thought on folders:**
-If you intend to install very large Python packages, you may want to 
-reconsider the location for the Python install. You could perform the
-steps here, altered slightly so that the install goes in a folder like
-`/data/<YOUR_USERNAME>/programs-big/python` instead.
+#### Note:
+* If you intend to install very large Python packages, you may want to 
+  reconsider the location for the Python install. You could perform the
+  steps in this guide, altered slightly so that the install goes in a
+  folder like `/data/<YOUR_USERNAME>/programs-big/python` instead.
 
 
 
