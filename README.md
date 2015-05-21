@@ -37,12 +37,12 @@ the purpose of following along with the guide.
 mkdir ~/programs
 ```
 
-I keep enormous programs in `/data/<USERNAME>/programs-big` and create 
-symlinks or add to the PATH as described above. There aren't a lot of 
-these I have to deal with. For example though, if you build the image
-registration package, ANTs, following the developers' recommended
-install method, it takes up 5.7 GB (including ITK, which is also 
-downloaded and built in that process). This is a big step toward 
+I keep enormous programs in `/data/users/<USERNAME>/programs-big` and
+create symlinks or add to the PATH as described above. There aren't a
+lot of these I have to deal with. For example though, if you build 
+the image registration package, ANTs, following the developers' 
+recommended install method, it takes up 5.7 GB (including ITK, which 
+is also downloaded and built in that process). This is a big step toward 
 hitting the home directory size cap, and such programs probably don't
 need to be backed up often, so the data directory is a good fit.
 
@@ -51,7 +51,7 @@ need to be backed up often, so the data directory is a good fit.
 * If you intend to install very large Python packages, you may want to 
   reconsider the location for the Python install. You could perform the
   steps in this guide, altered slightly so that the install goes in a
-  folder like `/data/<YOUR_USERNAME>/programs-big/python` instead.
+  folder like `/data/users/<YOUR_USERNAME>/programs-big/python` instead.
 
 
 
